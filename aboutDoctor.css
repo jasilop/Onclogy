@@ -1,0 +1,55 @@
+.about-doc-container{
+    margin: 50px 0;
+}
+
+.about-doc-container > h2{
+    color: #E41E51;
+}
+
+.about-doc-container > p{
+    color: #8D96A3;
+    margin: 30px 0;
+}
+
+.about-doc-container > ul{
+    list-style: none;
+}
+
+.about-doc-container > ul > li{
+    align-items: center;
+    color: #8D96A3;
+}
+
+.about-doc-container > ul > li:before{
+    content: "\2022";
+    color: #E41E51;
+    font-weight: bold;
+    padding-right: 18px;
+    font-size: 25px;
+}
+
+.doc-area-interest h3{
+    color: #213646;
+    padding: 40px 0 25px 0;
+}
+
+.doc-area-interest ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doc-area-interest > ul > li{
+    padding: 0 65px 15px 0;
+    align-items: center;
+    min-width: 300px;
+    max-width: 300px;
+    font-size: 14px;
+}
+
+.doc-area-interest > ul > li:before{
+    content: "\2022";
+    color: #E41E51;
+    font-weight: bold;
+    padding-right: 18px;
+    font-size: 25px;
+}

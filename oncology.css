@@ -1,0 +1,23 @@
+.oncology{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 65px 0
+}
+
+.oncology > span{
+    padding: 25px 0;
+    color: #9B9B9B;
+    font-size: 13px;
+}
+
+.oncology > h2{
+    color: #E41E51;
+}
+
+.oncology > img{
+    height: 410px;
+    width: 60%;
+    border-radius: 25px;
+}
