@@ -3,6 +3,7 @@
 @import "aboutDoctor.css";
 @import "review.css";
 @import "oncology.css";
+@import "blog.css";
 @import "form.css";
 @import "footer.css";
 /* @import "navbar.css";
@@ -36,7 +37,7 @@ body{
 }
 
 .doc-padding{
-  padding: 0 85px;
+  padding: 0 120px;
 }
 
 .scale-up-center {
