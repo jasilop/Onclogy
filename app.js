@@ -1,58 +1,62 @@
+let displayFlg = document.getElementById('dlg')
+let menu = document.getElementById('burger')
+let isClick = false
 
-document.getElementsByClassName('navbar_menu')[0].addEventListener('click', function (event) {
-    let isFlex = document.getElementsByClassName('navbar_menu_items')[0].style.display
-    if(isFlex){
-        document.getElementsByClassName('navbar_menu')[0].getElementsByTagName('img')[0].src = "Assets/menu.png"
-        document.getElementsByClassName('navbar_menu_items')[0].style.display = ''
-    }else{
-        document.getElementsByClassName('navbar_menu')[0].getElementsByTagName('img')[0].src = "Assets/icons8-close-30.png"
-        document.getElementsByClassName('navbar_menu_items')[0].style.display = 'flex'
+// function disabelMenu(e){
+//     if(!isClick){
+//         displayFlg.style.display = 'none'
+//     }
+// }
+
+document.addEventListener("click", (evt) => {
+    if(evt.target == menu){
+        displayFlg.style.display = 'block'
     }
-});
-
-document.addEventListener("click", function(el){
-    if(el.target && el.target.classList.contains('project')){
-        let element = document.getElementById('our-project');
-        element.scrollIntoView({
-            behavior: "smooth"
-        });
-    }else if(el.target && el.target.classList.contains('about')){
-        let element = document.getElementById('about-us');
-        element.scrollIntoView({
-            behavior: "smooth"
-        });
-    }else if(el.target && el.target.classList.contains('button-contact')){
-        let element = document.getElementById('form');
-        element.scrollIntoView({
-            behavior: "smooth"
-        });
-    }else if(el.target && el.target.classList.contains('strategy')){
-        let element = document.getElementById('description');
-        element.scrollIntoView({
-            behavior: "smooth"
-        });
+    if(evt.target.classList.contains('sa-dialog')){
+        displayFlg.style.display = 'none'
     }
 })
 
-function changeImg(img){
-    imgSrc = img.getAttribute("src")
-    let headerImage = document.getElementById('headerImg')
-    switch (imgSrc) {
-        case 'Assets/multi-1.jpg':
-            headerImage.src = "Assets/construction-concept-with-engineering-tools 1 (1).jpg"
-            break;
-        case 'Assets/multi-2.jpg':
-            headerImage.src = "Assets/Rectangle 13.jpg"
-            break;
-        case 'Assets/multi-3.jpg':
-            break;
-    
-        default:
-            break;
-    }
+// document.getElementsByClassName('navbar_menu')[0].addEventListener('click', function (event) {
+//     isClick = true
+//     displayFlg.style.display = 'block'
+//     setTimeout(() => {
+//         isClick = false
+//     }, 500);
+// }),
+
+
+function sendEmail(){
+    let name = document.getElementById('name').value
+    let mail = document.getElementById('mail').value
+    let subject = document.getElementById('subject').value
+    let message = document.getElementById('message').value
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username : "fasalkp26@gmail.com",
+        Password : "0E556C2B2CEE223EA1D159E67FB1DE4402D1",
+        To : mail,
+        From : "fasalkp26@gmail.com",
+        Subject : subject,
+        Body : message,
+        }).then( message => {
+            console.log(message,'message')
+            if(message == 'OK'){
+                alert('Email sent successfully')
+                document.getElementById('name').value = ''
+                document.getElementById('mail').value = ''
+                document.getElementById('subject').value = ''
+                document.getElementById('message').value = ''
+            }
+        });
 }
 
-function resetImg(){
-    let headerImage = document.getElementById('headerImg')
-    headerImage.src = "Assets/construction-concept-with-engineering-tools 1 (1).jpg"
+function scrollInto(id){
+    if(id){
+        displayFlg.style.display = 'none'
+        let element = document.getElementById(id)
+        element.scrollIntoView({
+            behavior: 'smooth'
+        })
+    }
 }

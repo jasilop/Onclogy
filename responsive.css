@@ -1,0 +1,166 @@
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+
+    .doc-none{
+        display: block;
+    }
+
+    /* Header section */
+    .doc-padding{
+       padding: 0 25px;
+    }
+
+    .docdet-container, .nav-container, .doc-det:nth-child(2), .docname-container > p:nth-child(1){
+        display: none;
+    }
+
+    .docname-container > p:nth-child(2){
+        display: block;
+    }
+
+    .docinfo-container2{
+        padding: 15px 25px;
+        height: inherit;
+    }
+
+    .doc-det{
+        flex-direction: row;
+        padding: 10px 0;
+    }
+
+    .docname-container > p{
+        font-size: 22px;
+    }
+
+    .doc-banner-container > img{
+        height: inherit;
+    }
+
+    .docdet-mob{
+        display: flex;
+        background-color: #f4fcff;
+        justify-content: space-between;
+        padding: 11px 25px;
+    }
+
+    .docdet-mob-ph{
+        display: flex;
+        align-items: center;
+    }
+
+    .docdet-mob-ph > p{
+        padding-left: 20px;
+        color: #86909D;
+    }
+
+    .doc-banner-container > picture > img{
+        height:inherit;
+        width:100%;
+    }
+
+    
+    /*about doctor section*/
+    .about-doc-container {
+        margin: 25px 0;
+    }
+
+    .about-doc-container > p {
+        margin: 20px 0;
+    }
+
+
+
+    /*doctor review section*/
+    .doc-review-container {
+        overflow: auto;
+        padding: 0 0;
+    }
+
+    .review-item{
+        padding: 13px 45px;
+        justify-content: flex-start;
+    }
+
+    .review-item > p{
+        padding-top: 15px;
+    }
+
+
+    /*oncology*/
+    .oncology{
+        display: none;
+    }
+
+
+    /*blog*/
+    .blog-container {
+        padding: 25px 25px 75px;
+    }
+
+    .blog-img1 {
+        padding: 0;
+    }
+
+    .img-desc {
+        padding: 20px;
+    }
+
+    .img-desc p{
+        font-size: 15px;
+    }
+
+    .blog-img2{
+        display: none;
+    }
+
+
+    /* form */
+    .form_container {
+        padding: 2rem 2rem;
+    }
+
+    .form-tag {
+        margin: 0;
+    }
+
+    .slots-item {
+        padding-left: 0;
+    }
+
+    .form-tag {
+        flex-direction: column;
+    }
+
+    .form_container > h2 {
+        color: #E41E51;
+    }
+
+    .form_enter > h1 {
+        font-size: 1.5rem;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    .form_enter > p{
+        text-align: center;
+    }
+
+
+    /*footer*/
+    .nav-items{
+        width: 30%;
+    }
+
+    .nav-item2{
+        align-items: end;
+    }
+
+    .nav-item2 > p{
+        text-align: end;
+        font-size: 14px;
+    }
+
+    .nav-btn{
+        width: 70%;
+    }
+
+}

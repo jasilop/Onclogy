@@ -79,7 +79,12 @@
     border-color: transparent;
 }
 
-@media screen and (max-width: 810px) {
+.button-submit > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* @media screen and (max-width: 810px) {
 
     .form_container{
         flex-direction: column;
@@ -108,4 +113,4 @@
         font-size: 18px;
     }
     
-}
+} */

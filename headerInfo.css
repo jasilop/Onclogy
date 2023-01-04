@@ -1,3 +1,23 @@
+  .doc-none{
+      display: none;
+  }
+
+  .sa-dialog{
+        display: none;
+    }
+
+  .doc-flex{
+    display: flex;
+  }
+  
+  .doc-padding{
+    padding: 0 120px;
+  }
+  
+  .pointer{
+    cursor: pointer;
+  }
+
 .docinfo-container{
     background-color: #f4fcff;
     flex-direction: column;
@@ -54,7 +74,11 @@
     font-size: 30px;
 }
 
-.docdet-container > button{
+.docname-container > p:nth-child(2){
+    display: none;
+}
+
+.apnt-btn{
     border-color: transparent;
     border-radius: 20px;
     border-radius: 20px;
@@ -65,6 +89,10 @@
     letter-spacing: 1px;
 }
 
+.docdet-mob{
+    display: none;
+}
+
 .nav-container {
     padding: 20px 120px;
     background-color: #f4fcff;
@@ -73,9 +101,26 @@
 .nav-container p{
     color: #2C2B2B;
     margin-right: 70px;
+    position: relative;
 }
 
-.doc-banner-container > img{
+.underline-anim:after{
+    content: "";
+    width: 0;
+    display: block;
+    height: 1.5px;
+    background-color: black;
+    transition: width 0.3s ease-in;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.underline-anim:hover:after{
+    width: 100%;
+}
+
+.doc-banner-container > picture > img{
     height:400px;
     width:100%;
 }

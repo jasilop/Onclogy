@@ -2,18 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1, user-scalable=no, shrink-to-fit=no' name='viewport' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>MN Arch</title>
+    <link rel="icon" type="image/svg" href="Assets/shafi logo.svg" sizes="16x16">
+    <title>Dr shafi</title>
 </head>
 <body>
     <div id="root">
+        <div class="sa-dialog" id="dlg" >
+            <div class="sa-dialog-body sa-fixed-right">
+                <p>Dr shafi cancer care</p>
+                <div class="dialog-items-container">
+                    <div class="dialog-items doc-flex">
+                        <img src="Assets/home.svg" alt="">
+                        <p onclick="scrollInto('root')">Home</p>
+                    </div>
+                    <div class="dialog-items doc-flex">
+                        <img src="Assets/about.svg" alt="">
+                        <p onclick="scrollInto('about-us')">About Us</p>
+                    </div>
+                    <div class="dialog-items doc-flex">
+                        <img src="Assets/blog.svg" alt="">
+                        <p onclick="scrollInto('blog')">Blog</p>
+                    </div>
+                    <div class="dialog-items doc-flex">
+                        <img src="Assets/contact-mail.svg" alt="">
+                        <p onclick="scrollInto('form')">Contact Us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="app">
             <div class="header-container">
+                <!-- <div class="sa-dialog" id="dlg">
+                    <div class="sa-dialog-body sa-fixed-right">
+                        <p>Dr shafi cancer care</p>
+                        <div class="dialog-items-container">
+                            <div class="dialog-items doc-flex">
+                                <img src="Assets/home.svg" alt="">
+                                <p>Home</p>
+                            </div>
+                            <div class="dialog-items doc-flex">
+                                <img src="Assets/about.svg" alt="">
+                                <p>About Us</p>
+                            </div>
+                            <div class="dialog-items doc-flex">
+                                <img src="Assets/blog.svg" alt="">
+                                <p>Blog</p>
+                            </div>
+                            <div class="dialog-items doc-flex">
+                                <img src="Assets/contact-mail.svg" alt="">
+                                <p>Contact Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <div class="doc-flex doc-padding docinfo-container">
                     <div class="doc-flex header1">
                         <div class="doc-flex doc-det">
@@ -30,7 +77,9 @@
                     <div class="doc-flex header1">
                         <div class="doc-flex docname-container">
                             <p>Dr shafi's cancer care</p>
+                            <p>Dr shafi</p>
                         </div>
+                        <button class="apnt-btn pointer doc-none">Appointment</button>
                         <div class="doc-flex docdet-container">
                             <div class="doc-flex docdet">
                                 <img src="Assets/phone.svg" alt="phone">
@@ -42,21 +91,38 @@
                                 <p>Mon - Sat (08: 00 am - 06: 00pm)</p>
                                 <div class="vertical-line"></div>
                             </div>
-                            <button>Appointment</button>
+                            <button class="apnt-btn pointer">Appointment</button>
                         </div>
                     </div>
                 </div>
+                <div class="docdet-mob doc-padding">
+                    <div class="docdet-mob-ph">
+                        <img src="Assets/phone.svg" alt="phone">
+                        <p>Phone: +91 8547313341</p>
+                    </div>
+                    <img src="Assets/menu.svg" alt="menu" class="navbar_menu" id="burger">
+                </div>
                 <div class="doc-flex nav-container">
-                    <p>Home</p>
-                    <p>About Us</p>
-                    <p>Blog</p>
-                    <p>Contact Us</p>
+                    <p class="pointer underline-anim" onclick="scrollInto('root')">Home</p>
+                    <p class="pointer underline-anim" onclick="scrollInto('about-us')">About Us</p>
+                    <p class="pointer underline-anim" onclick="scrollInto('blog')">Blog</p>
+                    <p class="pointer underline-anim" onclick="scrollInto('form')">Contact Us</p>
                 </div>
             </div>
-            <div class="doc-banner-container">
-                <img src="Assets/shafi banner.png" alt="">
+             <div class="doc-banner-container">
+                <picture>
+                    <source 
+                      media="(min-width: 700px)"
+                      srcset="Assets/shafibanner.png">
+                    <source 
+                      media="(min-width: 465px)"
+                      srcset="Assets/dr shafi.png">
+                    <img 
+                      src="Assets/dr shafi.png" 
+                      alt="doctor image">
+                  </picture>
             </div>
-            <div class="doc-padding about-doc-container">
+            <div class="doc-padding about-doc-container" id="about-us">
                 <h2>About us</h2>
                 <p>
                     A clinical and radiation oncologist who is completely involved with patient care; 
@@ -110,9 +176,22 @@
             <div class="oncology">
                 <h2>What is Oncology?</h2>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vitae deleniti reprehenderit quasi veniam repellendus molestiae.</span>
-                <img src="https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?w=1060&t=st=1669137465~exp=1669138065~hmac=1ae43d56d9879b7e7598d973798fbdfa5820dc7d3311cb13f21a0d026d5b16df" alt="">
+                <div class="yt-container">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src=" https://www.youtube.com/embed/PjD-RxHM8I4?autoplay=1"
+                        loading="lazy"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;height:100%;top:0;bottom:0;margin:auto;border-radius:15px;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/PjD-RxHM8I4?autoplay=1><img src=https://img.youtube.com/vi/PjD-RxHM8I4/hqdefault.jpg alt='about doctor'><span>▶</span></a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title="About Doctor"
+                        >
+                    </iframe>
+                </div>
             </div>
-            <div class="blog-container">
+            <div class="blog-container" id="blog">
                 <h1>Blog</h1>
                 <div class="doc-flex blog-img-container">
                     <div class="blog-img1">
@@ -142,7 +221,7 @@
                     </div>
                 </div>
             </div>
-            <div class="doc-padding form_container" id="form">
+            <div class="form_container" id="form">
                 <h2>Contact us</h2>
                 <div class="form-tag">
                     <div class="slots-container">
@@ -172,13 +251,23 @@
                                 <input type="text" placeholder="Enter your email" id="mail">
                             </div>
                             <div class="form_item_container">
-                                <input type="text" placeholder="Enter your subject" id="mail">
+                                <input type="text" placeholder="Enter your subject" id="subject">
                             </div>
                             <div class="form_item_container">
                                 <textarea name="message" placeholder="Enter your message" id="message" cols="30" rows="5"></textarea>
                             </div>
                             <div class="form_item_container_submit">
-                                <button class="button-submit">Send us a message</button>
+                                <button class="button-submit pointer" onclick="sendEmail()">
+                                    <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sadiquesadi76@gmail.com&su=Oncology&body=A clinical and radiation oncologist who is completely involved with patient care; has worked closely with other doctors as a team to provide comprehensive evaluation and treatment services for patients" target="_blank">
+                                    </a> -->
+                                    Send us a message
+                                </button>
+                                <!-- for mobile -->
+                                <!-- <button class="button-submit pointer">
+                                    <a href="mailto:ajmalzyne@gmail.com&subject=Oncology&body=A clinical and radiation oncologist who is completely involved with patient care; has worked closely with other doctors as a team to provide comprehensive evaluation and treatment services for patients">
+                                        Send us a message
+                                    </a>
+                                </button> -->
                             </div>
                     </div>
                 </div>
@@ -203,13 +292,14 @@
                         <p>Stay up to date on the latest Le-Beauty news</p>
                         <div class="doc-flex nav-btn">
                             <input type="text" placeholder="" id="mail">
-                            <button class="footer-btn">Send</button>
+                            <button class="footer-btn pointer">Send</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
