@@ -64,13 +64,12 @@
 }
 
 .docname-container{
-    font-family: Impact Regular;
+    font-family: 'Anton', sans-serif;
     align-items: center;
 }
 
 .docname-container > p{
     color: #E41E51;
-    font-weight: 500;
     font-size: 30px;
 }
 
