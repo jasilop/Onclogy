@@ -31,6 +31,10 @@ function sendEmail(){
     let mail = document.getElementById('mail').value
     let subject = document.getElementById('subject').value
     let message = document.getElementById('message').value
+    if(!name || !mail || !subject || !message){
+        alert('please enter all fields')
+        return
+    }
     Email.send({
         Host: "smtp.elasticemail.com",
         Username : "fasalkp26@gmail.com",

@@ -5,17 +5,26 @@
     }
 
     /* Header section */
+
+    .apnt-btn{
+        display: none
+    }
+
+    .al-center{
+        justify-content: center;
+    }
+
     .doc-padding{
        padding: 0 25px;
     }
 
-    .docdet-container, .nav-container, .doc-det:nth-child(2), .docname-container > p:nth-child(1){
+    .docdet-container, .nav-container, .doc-det:nth-child(2){
         display: none;
     }
 
-    .docname-container > p:nth-child(2){
+    /* .docname-container > p:nth-child(2){
         display: block;
-    }
+    } */
 
     .docinfo-container2{
         padding: 15px 25px;
@@ -52,11 +61,28 @@
         color: #86909D;
     }
 
+    .doc-banner-container > picture{
+        background-color: #f4fcff;
+    }
+
     .doc-banner-container > picture > img{
         height:inherit;
         width:100%;
     }
 
+
+    .docdet-cert{
+        background-color: #f4fcff;
+        padding: 5px 25px 11px;
+    }
+
+    .docdet-cert > h5{
+        color: #E41E51;
+    }
+
+    .docdet-cert > p{
+        padding-top: 10px;
+    }
     
     /*about doctor section*/
     .about-doc-container {
