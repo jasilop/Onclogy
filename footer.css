@@ -12,9 +12,11 @@
     padding-top: 50px;
 }
 
-.footer1 h3{
+.footer1 p{
+    font-family: 'Anton', sans-serif;
     color: #E41E51;
-    align-self: center;
+    font-size: 20px;
+    letter-spacing: 0.4px;
 }
 
 .media-container:nth-child(1){
