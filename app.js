@@ -11,9 +11,11 @@ let isClick = false
 document.addEventListener("click", (evt) => {
     if(evt.target == menu){
         displayFlg.style.display = 'block'
+        document.body.style.overflow = 'hidden'
     }
     if(evt.target.classList.contains('sa-dialog')){
         displayFlg.style.display = 'none'
+        document.body.style.overflow = 'auto'
     }
 })
 
@@ -58,6 +60,7 @@ function sendEmail(){
 function scrollInto(id){
     if(id){
         displayFlg.style.display = 'none'
+        document.body.style.overflow = 'auto'
         let element = document.getElementById(id)
         element.scrollIntoView({
             behavior: 'smooth'

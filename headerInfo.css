@@ -2,6 +2,10 @@
       display: none;
   }
 
+  .docdet-cert{
+    display: none;
+  }
+
   .sa-dialog{
         display: none;
     }

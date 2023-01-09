@@ -6,6 +6,10 @@
 
     /* Header section */
 
+    .docdet-cert{
+        display: block;
+    }
+
     .apnt-btn{
         display: none
     }
