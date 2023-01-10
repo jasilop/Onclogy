@@ -34,17 +34,17 @@ function sendMail(id){
     let subject = document.getElementById('subject').value
     let message = document.getElementById('message').value
     if(id == 'desktop'){
-        aTag.href = `https://mail.google.com/mail/?view=cm&fs=1&to=fasalkp26@gmail.com&su=${subject}&body=${message}`
+        aTag.href = `https://mail.google.com/mail/?view=cm&fs=1&to=drshafionco@gmail.com&su=${subject}&body=${message}`
         aTag.target = '_blank'
     }
     if(id == 'mob'){
         let userAgent = navigator.userAgent
         if(userAgent.match(/chrome|chromium|crios/i)){
-            aTag.href = `mailto:fasalkp26@gmail.com`//chrome
+            aTag.href = `mailto:drshafionco@gmail.com`//chrome
             return
         }
         if(userAgent.match(/safari/i)){
-            aTag.href = `mailto:fasalkp26@gmail.com`//safari
+            aTag.href = `mailto:drshafionco@gmail.com`//safari
             return
         }
     }
@@ -61,10 +61,10 @@ function sendEmail(v){
     }
     Email.send({
         Host: "smtp.elasticemail.com",
-        Username : "fasalkp26@gmail.com",
+        Username : "drshafionco@gmail.com",
         Password : "0E556C2B2CEE223EA1D159E67FB1DE4402D1",
         To : mail,
-        From : "fasalkp26@gmail.com",
+        From : "drshafionco@gmail.com",
         Subject : subject,
         Body : message,
         }).then( message => {
