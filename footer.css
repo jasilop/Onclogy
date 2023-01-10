@@ -37,6 +37,10 @@
     justify-content: end;
 }
 
+.nav-item2 > p{
+    padding-bottom: 15px;
+}
+
 .nav-btn{
     padding-top: 25px;
 }
