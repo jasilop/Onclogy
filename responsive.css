@@ -199,6 +199,7 @@
     .nav-item2 > p{
         text-align: end;
         font-size: 14px;
+        padding-bottom: 15px;
     }
 
     .nav-btn{
