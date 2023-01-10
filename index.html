@@ -251,30 +251,29 @@
                     <div class="form_enter">
                             <h1>Feel free to contact us</h1>
                             <p>For all enquiries, please email us using the form below</p>
-                            <div class="form_item_container">
+                            <div class="form_item_container doc-switch">
                                 <input type="text" placeholder="Enter your name" id="name">
                             </div>
                             <div class="form_item_container">
                                 <input type="text" placeholder="Enter your email" id="mail">
                             </div>
-                            <div class="form_item_container">
+                            <div class="form_item_container doc-switch">
                                 <input type="text" placeholder="Enter your subject" id="subject">
                             </div>
-                            <div class="form_item_container">
+                            <div class="form_item_container doc-switch">
                                 <textarea name="message" placeholder="Enter your message" id="message" cols="30" rows="5"></textarea>
                             </div>
                             <div class="form_item_container_submit">
-                                <button class="button-submit pointer" onclick="sendEmail()">
-                                    <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sadiquesadi76@gmail.com&su=Oncology&body=A clinical and radiation oncologist who is completely involved with patient care; has worked closely with other doctors as a team to provide comprehensive evaluation and treatment services for patients" target="_blank">
-                                    </a> -->
-                                    Send us a message
-                                </button>
+                                <!-- for desktop -->
+                                <a class="doc-switch" id="desktop" href="#" onclick="sendMail('desktop')">
+                                    <button class="button-submit pointer">Send us a message</button>
+                                </a>
                                 <!-- for mobile -->
-                                <!-- <button class="button-submit pointer">
-                                    <a href="mailto:ajmalzyne@gmail.com&subject=Oncology&body=A clinical and radiation oncologist who is completely involved with patient care; has worked closely with other doctors as a team to provide comprehensive evaluation and treatment services for patients">
+                                <button class="button-submit pointer doc-none" onclick="sendMail('mob')">
+                                    <a href="#" id="mob">
                                         Send us a message
                                     </a>
-                                </button> -->
+                                </button>
                             </div>
                     </div>
                 </div>
@@ -282,7 +281,7 @@
             <div class="doc-padding footer-container">
                 <hr>
                 <div class="doc-flex footer1">
-                    <p>Dr shafis cancer care</p>
+                    <p>Dr shafi's cancer care</p>
                     <div class="doc-flex media-container">
                         <img src="https://img.icons8.com/color/48/null/youtube-play.png"/>
                         <img src="https://img.icons8.com/color/48/null/facebook.png"/>

@@ -27,8 +27,30 @@ document.addEventListener("click", (evt) => {
 //     }, 500);
 // }),
 
+function sendMail(id){
+    let aTag = document.getElementById(id)
+    let name = document.getElementById('name').value
+    let mail = document.getElementById('mail').value
+    let subject = document.getElementById('subject').value
+    let message = document.getElementById('message').value
+    if(id == 'desktop'){
+        aTag.href = `https://mail.google.com/mail/?view=cm&fs=1&to=fasalkp26@gmail.com&su=${subject}&body=${message}`
+        aTag.target = '_blank'
+    }
+    if(id == 'mob'){
+        let userAgent = navigator.userAgent
+        if(userAgent.match(/chrome|chromium|crios/i)){
+            aTag.href = `mailto:fasalkp26@gmail.com`//chrome
+            return
+        }
+        if(userAgent.match(/safari/i)){
+            aTag.href = `mailto:fasalkp26@gmail.com`//safari
+            return
+        }
+    }
+}
 
-function sendEmail(){
+function sendEmail(v){
     let name = document.getElementById('name').value
     let mail = document.getElementById('mail').value
     let subject = document.getElementById('subject').value

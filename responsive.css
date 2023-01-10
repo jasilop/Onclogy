@@ -4,6 +4,10 @@
         display: block;
     }
 
+    .doc-switch{
+        display: none;
+    }
+
     /* Header section */
 
     .docdet-cert{
@@ -182,6 +186,14 @@
 
     .nav-item2{
         align-items: end;
+    }
+
+    .form_item_container_submit {
+        padding-top: 22px;
+    }
+
+    .footer-container {
+        margin: 90px 0 70px 0;
     }
 
     .nav-item2 > p{

@@ -1,9 +1,13 @@
-  .doc-none{
+  .doc-none {
       display: none;
   }
 
-  .docdet-cert{
-    display: none;
+  .doc-switch {
+      display: block;
+  }
+
+  .docdet-cert {
+      display: none;
   }
 
   .sa-dialog{
